@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+    <html>
+        <head>
+            <link rel="stylesheet" href="css/styles.css">
+            <title>View Stock</title>
+        </head>
+
+        <body>
+
+                <div class="container">
+                    <input type="submit" id="logout_button" value='Logout'>
+
+                    <div class="title">
+                        <img src="images/logo.jpg" alt="Logistix" class="logo_title">
+                        <br>
+
+                        <h2>View/Modify Stock</h2>
+                    </div>
+
+                    <div id="submit_form">
+                        <p>Site</p>
+                        <form action="/placeholder" value="site_3">
+                            <select name="site">
+                            <option value="site_1">Site 1</option>
+                            <option value="site_2">Site 2</option>
+                            <option value="site_3" selected>Site 3</option>
+                            <option value="site_4">Site 4</option>
+                            </select>
+
+                        <p>Name</p>
+                        <input name="name" type="text" value="Shelving">
+
+                        <p>Description</p>
+                        <input name="description" type="text" value="Free standing shelves. 4x52. 100kg certified">
+
+                        <p>Number</p>
+                        <input name="firstname" type="number" value="15">
+
+                        <p>Type</p>
+                        <form action="/placeholder">
+                            <select name="type">
+                            <option value="type_1">Type 1</option>
+                            <option value="type_2" selected>Type 2</option>
+                            <option value="type_3">Type 3</option>
+                            <option value="type_4">Type 4</option>
+                            </select>
+                        
+                        <p>Status</p>
+                        <form action="/placeholder">
+                            <select name="status">
+                            <option value="status_1">Status 1</option>
+                            <option value="status_2">Status 2</option>
+                            <option value="status_3">Status 3</option>
+                            <option value="status_4" selected>Status 4</option>
+                            </select>
+
+                        <p>Notes</p>
+                        <input name="notes" type="text">
+                        <br>
+                        <br>
+                        <input type="submit" id="submit_button">
+
+                    </div>
+                </div>
+        </body>
+    </html>

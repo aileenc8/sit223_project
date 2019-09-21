@@ -1,0 +1,86 @@
+h2 {
+    text-align: center;
+}
+
+body {
+    font: 1em arial, sans-serif;
+    background-color: rgba(194, 229, 245, 0.514);
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.25em 0.25em;
+    border: 2px solid rgb(156, 187, 218);
+    border-radius: 4px;
+    font: 1em arial, sans-serif;
+}
+
+input:focus {
+    border: 2px solid #555;
+}
+
+select {
+    border: 2px solid rgb(174, 190, 206);
+    border-radius: 4px;
+    font: 1em arial, sans-serif;
+}
+
+select:focus {
+    border: 2px solid #555;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo_title {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 50px;
+    max-width: 800px;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.search_container {
+
+}
+
+#search_input {
+    width: 70%;
+}
+
+#search_button {
+    width: 20%;
+    border-color: lightgray;
+    font-weight: bold;
+}
+
+.search_results_container {
+    background-color: rgb(236, 236, 236);
+}
+
+#submit_form {
+    text-align: left;
+}
+
+#submit_button {
+    border-color: lightgray;
+    font-weight: bold;
+}
+
+#logout_button {
+    width: 10%;
+    border-color: lightgray;
+    display: block;
+    margin-left: 90%;
+}
