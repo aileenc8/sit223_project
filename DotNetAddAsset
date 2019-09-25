@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+
+namespace AddAsset
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Page.IsPostBack == true)
+            {
+                Label1.Text = ("Asset Added! Data was inserted.");
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection logicom = new SqlConnection("Server=tcp:logistix1.database.windows.net,1433;Initial Catalog=logistix1;Persist Security Info=False;User ID=groupc;Password=Deakin2019;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            {
+                SqlCommand insert = new SqlCommand("EXEC dbo.InsertAsset @AssetName, @AssetDesc, @AssetType, @AssetStatus, @AssetDestination", logicom);
+                insert.Parameters.AddWithValue("@AssetName", NameBox.Text);
+                insert.Parameters.AddWithValue("@AssetDesc", DescBox.Text);
+                insert.Parameters.AddWithValue("@AssetType", TypeBox.Text);
+                insert.Parameters.AddWithValue("@AssetStatus", StatusBox.SelectedValue);
+                insert.Parameters.AddWithValue("@AssetDestination", DestBox.SelectedValue);
+
+                logicom.Open();
+                insert.ExecuteNonQuery();
+                logicom.Close();
+
+                if (IsPostBack)
+                {
+                    NameBox.Text = "";
+                    DescBox.Text = "";
+                    TypeBox.Text = "";
+                }
+            }
+        }
+    }
+}
