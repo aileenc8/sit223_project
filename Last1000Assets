@@ -1,0 +1,7 @@
+SELECT TOP (1000) [AssetNumber]
+      ,[AssetName]
+      ,[AssetDesc]
+      ,[AssetType]
+      ,[AssetStatus]
+      ,[AssetDestination]
+  FROM [dbo].[AddAsset]
